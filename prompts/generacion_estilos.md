@@ -14,7 +14,7 @@ El JSON debe contener las siguientes jerarquías y datos:
 
 2. **Paleta para Diapositivas Normales (Contenido):**
    - `background`: Color de fondo (generalmente blanco o muy claro para legibilidad).
-   - `text_primary`: Color de texto principal (oscuro, para el cuerpo).
+   - `text_prima ry`: Color de texto principal (oscuro, para el cuerpo).
    - `text_secondary`: Color para subtítulos o texto menos importante.
    - `accent`: Color para viñetas, iconos, enlaces o gráficos.
 
