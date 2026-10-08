@@ -1,0 +1,51 @@
+[
+  {
+    "period": "Augustus",
+    "start_year": -27,
+    "end_year": 14,
+    "silver_content_estimated_percentage": 98,
+    "notes": "High Stability"
+  },
+  {
+    "period": "Nero",
+    "start_year": 54,
+    "end_year": 68,
+    "silver_content_estimated_percentage": 93,
+    "notes": "First Debasement (Reduced purity)"
+  },
+  {
+    "period": "Marcus Aurelius",
+    "start_year": 161,
+    "end_year": 180,
+    "silver_content_estimated_percentage": 75,
+    "notes": "Gradual Devaluation (Funding wars)"
+  },
+  {
+    "period": "Septimius Severus",
+    "start_year": 193,
+    "end_year": 211,
+    "silver_content_estimated_percentage": 50,
+    "notes": "Currency crisis"
+  },
+  {
+    "period": "Crisis of the Third Century",
+    "start_year": 235,
+    "end_year": 284,
+    "silver_content_estimated_percentage": 5,
+    "notes": "Hyperinflation & Coin Clipping (Barter system returns)"
+  },
+  {
+    "period": "Diocletian",
+    "start_year": 284,
+    "end_year": 305,
+    "silver_content_estimated_percentage": 5,
+    "notes": "Diocletian's Monetary reforms"
+  },
+  {
+    "period": "Fall of Western Roman Empire",
+    "start_year": 476,
+    "end_year": 476,
+    "silver_content_estimated_percentage": 0,
+    "notes": "Collapse of the denarius system"
+  }
+]

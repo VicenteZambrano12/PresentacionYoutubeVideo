@@ -1,0 +1,59 @@
+{
+"marca": {
+"nombre": "La IA explicada para escépticos",
+"estilo": "Tecnológico, accesible, moderno y confiable"
+},
+"paleta_de_colores": {
+"colores_base": {
+"azul_marino_oscuro": "#0A2540",
+"celeste_tecnologico": "#4CB5F5",
+"blanco_crema": "#F8F6F0",
+"blanco_puro": "#FFFFFF"
+},
+"diapositivas_titulo_y_divisores_seccion": {
+"descripcion": "Diseñadas para generar impacto y captar la atención. Usan modo oscuro.",
+"color_de_fondo": "#0A2540",
+"color_texto_encabezado": "#FFFFFF",
+"color_texto_subtitulo": "#4CB5F5",
+"color_elementos_graficos": "#4CB5F5"
+},
+"diapositivas_normales_o_contenido": {
+"descripcion": "Diseñadas para máxima legibilidad durante la exposición de información.",
+"color_de_fondo": "#F8F6F0",
+"color_texto_encabezado": "#0A2540",
+"color_texto_general": "#1A1A1A",
+"color_resaltado_y_vineta": "#4CB5F5",
+"color_enlaces": "#4CB5F5"
+}
+},
+"tipografia": {
+"fuentes": {
+"encabezados": {
+"familia": "Poppins, sans-serif",
+"estilo": "Bold o Semi-Bold",
+"justificacion": "Aporta un toque amigable y moderno, ideal para romper el escepticismo."
+},
+"texto_general": {
+"familia": "Open Sans, sans-serif",
+"estilo": "Regular",
+"justificacion": "Altamente legible en pantallas y proyectores para bloques de texto largos."
+}
+},
+"tamanos_de_letra_pt": {
+"portada": {
+"titulo_principal": 48,
+"subtitulo": 32
+},
+"divisor_de_seccion": {
+"titulo_seccion": 40
+},
+"diapositiva_normal": {
+"titulo_diapositiva": 28,
+"texto_nivel_1": 24,
+"texto_nivel_2": 20,
+"texto_nivel_3_o_cuerpo": 18,
+"notas_y_pie_de_pagina": 12
+}
+}
+}
+}
