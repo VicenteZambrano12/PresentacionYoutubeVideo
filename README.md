@@ -35,17 +35,19 @@ Después, abre la carpeta extraída. Los materiales estarán organizados igual q
 
 ## Qué encontrarás y para qué sirve cada carpeta
 
-La organización separa el contenido de una presentación concreta de los recursos que puedes reutilizar en otras presentaciones.
+La estructura de carpetas y los materiales son un **ejemplo de la presentación que se trabaja en el vídeo**. Sirven para seguir el proceso y entender cómo organizar la información; no son una estructura obligatoria para todas las presentaciones.
+
+En este ejemplo, la organización separa el contenido de la presentación de los recursos que puedes reutilizar en otras presentaciones. Puedes adaptar tanto los materiales como las carpetas a tu tema y a tus necesidades.
 
 | Carpeta | Qué contiene o para qué está destinada |
 | --- | --- |
 | [prompts](./prompts/) | Instrucciones para pedir a la IA que genere elementos de la presentación. Un *prompt* es el texto que copias y envías a una herramienta de IA para explicarle qué necesitas. |
 | [presentacion/material](./presentacion/material/) | Material propio de la presentación de ejemplo: fotografías, mapas, tablas, gráficos y datos. |
 | [presentacion/recursos](./presentacion/recursos/) | Recursos generales de marca o empresa, como logotipos y pautas de estilo, que se pueden reutilizar en distintas presentaciones. |
-| `presentacion/recursos/plantillas` | Espacio previsto para las plantillas de las diapositivas: diseños base sobre los que colocar el contenido. |
-| `presentacion/resultados` | Espacio previsto para las diapositivas generadas, la presentación PowerPoint y los resultados finales. |
+| `presentacion/recursos/plantillas` | Espacio previsto para las plantillas HTML de las diapositivas: diseños base sobre los que colocar el contenido. |
+| `presentacion/resultados` | Espacio previsto para las diapositivas generadas y la presentación final en archivos HTML, que se visualizan en un navegador web. |
 
-**Estado actual:** ya hay un prompt para generar el estilo visual, imágenes de marca, un archivo de estilos y materiales de ejemplo sobre Roma. Las carpetas de plantillas y resultados están vacías por ahora; por eso pueden no aparecer en GitHub ni en el ZIP. No se incluye todavía una presentación PowerPoint final.
+**Estado actual:** ya hay un prompt para generar el estilo visual, imágenes de marca, un archivo de estilos y materiales de ejemplo sobre Roma. Las carpetas de plantillas y resultados están vacías por ahora; por eso pueden no aparecer en GitHub ni en el ZIP. No se incluye todavía una presentación HTML final.
 
 ## Cómo utilizar los materiales
 
@@ -61,7 +63,7 @@ En [material](./presentacion/material/) encontrarás:
 - [Mapas](./presentacion/material/mapas/) de distintas etapas de Roma.
 - [Tablas, gráficos y datos](./presentacion/material/tablas_graficas/) para apoyar el contenido de las diapositivas.
 
-Estos archivos son el contenido del ejemplo. Para crear una presentación sobre otro tema, utiliza tus propias imágenes, datos y textos.
+Estos archivos son el contenido de la presentación de ejemplo del vídeo. La división en fotos, mapas y tablas o gráficos responde a ese contenido sobre Roma. Para crear una presentación sobre otro tema, utiliza tus propias imágenes, datos y textos, y adapta esta estructura al tipo de información que quieras presentar.
 
 ### 3. Define el aspecto visual con la IA
 
@@ -77,7 +79,7 @@ También puedes consultar el [archivo de estilos del ejemplo](./presentacion/rec
 
 Utiliza el vídeo como guía para combinar el contenido, los recursos visuales y las instrucciones para la IA. La idea de esta organización es trabajar en este orden:
 
-**Contenido → estilo de marca → plantilla de diapositivas → presentación final.**
+**Contenido → estilo de marca → plantilla HTML de diapositivas → presentación HTML final.**
 
 Cuando se incorporen plantillas y resultados, podrás utilizarlos como referencia y comparar el material de partida con el resultado final.
 
@@ -93,7 +95,9 @@ Usa únicamente imágenes y materiales para los que tengas permiso. Que un recur
 No. Puedes consultar los documentos, copiar las instrucciones para la IA y utilizar las imágenes sin herramientas de programación.
 
 **¿Cómo abro los archivos?**  
-Las imágenes se abren con el visor habitual de tu dispositivo. Los archivos `.md` son documentos de texto que también puedes leer directamente en GitHub; los `.json` se pueden consultar con un editor de texto. Cuando haya archivos `.pptx`, podrás abrirlos con PowerPoint o una herramienta compatible.
+Las imágenes se abren con el visor habitual de tu dispositivo. Los archivos `.md` son documentos de texto que también puedes leer directamente en GitHub; los `.json` se pueden consultar con un editor de texto.
+
+Cuando haya archivos `.html`, podrás ver las diapositivas o la presentación en un navegador como Chrome, Edge, Firefox o Safari, sin necesitar PowerPoint. Después de descomprimir el ZIP, haz doble clic en el archivo HTML o haz clic derecho y selecciona **Abrir con** y tu navegador. Mantén la estructura de carpetas para que las imágenes y los demás recursos vinculados se carguen correctamente. En GitHub verás el contenido del archivo HTML como texto; para visualizar la presentación, descárgala y ábrela en el navegador.
 
 **¿Cómo descargo una versión actualizada?**  
 Vuelve a descargar el ZIP desde esta página. Cada descarga incluye los archivos disponibles en ese momento; una copia ya descargada no se actualiza automáticamente.
