@@ -1,0 +1,156 @@
+<!-- 6.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diapositiva de Contenido - Figuras Históricas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 50px 80px;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: #F8F6F0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 3px solid #4CB5F5;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1.titulo-diapositiva {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28pt;
+            color: #0A2540;
+            margin: 0;
+        }
+
+        .logo-empresa {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .contenido-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente el contenido principal si sobra espacio */
+        }
+
+        .galeria-figuras {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; /* Asegura que los contenedores hijos tengan la misma altura si es necesario */
+            gap: 30px;
+            height: 100%; /* Aprovecha el espacio disponible en contenido-principal */
+        }
+
+        .figura-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .titulo-epoca {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 20pt; /* Ajustado para encajar bien encima de la imagen */
+            color: #4CB5F5;
+            margin-bottom: 15px;
+            min-height: 2.4em; /* Espacio para dos líneas si el texto es largo, para alinear imágenes */
+            display: flex;
+            align-items: flex-end; /* Alinea el texto al fondo del contenedor del título */
+            justify-content: center;
+        }
+
+        .contenedor-imagen-figura {
+            flex: 1; /* Permite que la imagen crezca para ocupar el espacio */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border-radius: 8px; /* Un pequeño borde redondeado para estética moderna */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+        }
+
+        .contenedor-imagen-figura img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover; /* Asegura que las imágenes llenen su contenedor uniformemente, ideal para retratos/bustos */
+            height: 100%; /* Forza a ocupar la altura del contenedor para uniformidad */
+            width: 100%;
+        }
+
+        .pie-figura {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18pt; /* Tamaño para notas según estilos.json, pero un poco más grande para legibilidad de nombres */
+            color: #1A1A1A;
+            font-weight: bold;
+        }
+
+        footer {
+            font-size: 12pt;
+            color: #1A1A1A;
+            border-top: 1px solid #0A2540;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto; /* Empuja el footer al final */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-diapositiva">Principales figuras históricas de cada tiempo</h1>
+        <img src="../recursos/imagenes/logo_.png" alt="Logo de la empresa" class="logo-empresa">
+    </header>
+    
+    <div class="contenido-principal">
+        <div class="galeria-figuras">
+            <div class="figura-item">
+                <div class="titulo-epoca">Inicios de la República</div>
+                <div class="contenedor-imagen-figura">
+                    <img src="../material/fotos/escipion_africano.jpeg" alt="Escipión Africano">
+                </div>
+                <div class="pie-figura">Escipión africano</div>
+            </div>
+            
+            <div class="figura-item">
+                <div class="titulo-epoca">Fin de la República</div>
+                <div class="contenedor-imagen-figura">
+                    <img src="../material/fotos/julio_cesar.jpeg" alt="Julio César">
+                </div>
+                <div class="pie-figura">Julio César</div>
+            </div>
+            
+            <div class="figura-item">
+                <div class="titulo-epoca">Imperio en su máxima extensión</div>
+                <div class="contenedor-imagen-figura">
+                    <img src="../material/fotos/trajano._busto.jpeg" alt="Trajano">
+                </div>
+                <div class="pie-figura">Trajano</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <span>La IA explicada para escépticos</span>
+        <span>Página 6</span>
+    </footer>
+</body>
+</html>

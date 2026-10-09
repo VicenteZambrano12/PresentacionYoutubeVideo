@@ -1,0 +1,117 @@
+<!-- 4.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diapositiva de Contenido - Introducción</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 50px 80px;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: #F8F6F0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 3px solid #4CB5F5;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1.titulo-diapositiva {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28pt;
+            color: #0A2540;
+            margin: 0;
+        }
+
+        .logo-empresa {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .contenido-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 0; /* Crucial para que flexbox controle bien la altura de la imagen */
+        }
+
+        .texto-normal {
+            font-size: 24pt;
+            line-height: 1.4;
+            margin: 0 0 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .contenedor-imagen {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .contenedor-imagen img {
+            max-width: 100%;
+            max-height: calc(100% - 30px); /* Deja espacio para el pie de foto */
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .pie-imagen {
+            font-size: 12pt;
+            color: #1A1A1A;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        footer {
+            font-size: 12pt;
+            color: #1A1A1A;
+            border-top: 1px solid #0A2540;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-diapositiva">Introducción</h1>
+        <img src="../recursos/imagenes/logo_.png" alt="Logo de la empresa" class="logo-empresa">
+    </header>
+    
+    <div class="contenido-principal">
+        <p class="texto-normal">Roma fue una de las civilizaciones más conocidas de la Antigüedad sino la que más. Su herencia ha marcado nuestra historia para los siglos de los siglos.</p>
+        
+        <div class="contenedor-imagen">
+            <img src="../material/mapas/mapa_imperio_117.jpeg" alt="Imperio en su máxima extensión con Trajano">
+            <span class="pie-imagen">Imperio en su máxima extensión con Trajano</span>
+        </div>
+    </div>
+    
+    <footer>
+        <span>La IA explicada para escépticos</span>
+        <span>Página 4</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diapositiva 8 - Inflación en el Imperio Romano</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 50px 80px;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: #F8F6F0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 3px solid #4CB5F5;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1.titulo-diapositiva {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28pt;
+            color: #0A2540;
+            margin: 0;
+        }
+
+        .logo-empresa {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .contenido-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        ul li::before {
+            content: "■";
+            color: #4CB5F5;
+            font-size: 0.8em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        .texto-nivel-1 {
+            font-size: 24pt;
+        }
+
+        .texto-nivel-2 {
+            font-size: 20pt;
+            margin-left: 40px;
+            margin-top: -10px;
+        }
+        
+        .texto-nivel-2::before {
+            content: "○";
+        }
+
+        .texto-nivel-3 {
+            font-size: 18pt;
+            margin-left: 80px;
+            margin-top: -10px;
+        }
+        
+        .texto-nivel-3::before {
+            content: "-";
+        }
+
+        .resaltado {
+            color: #4CB5F5;
+            font-weight: bold;
+        }
+
+        a {
+            color: #4CB5F5;
+            text-decoration: none;
+            border-bottom: 1px dashed #4CB5F5;
+        }
+
+        footer {
+            font-size: 12pt;
+            color: #1A1A1A;
+            border-top: 1px solid #0A2540;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        /* Estilos generados para la Gráfica de Barras basada en el JSON */
+        .grafica-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-left: 60px; /* Margen para el eje Y */
+            margin-bottom: 10px;
+        }
+
+        .grafica-area {
+            flex: 1;
+            border-bottom: 3px solid #0A2540;
+            border-left: 3px solid #0A2540;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding-top: 40px;
+        }
+
+        .linea-guia {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgba(10, 37, 64, 0.1);
+            z-index: 0;
+        }
+
+        .eje-y {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 12pt;
+            color: #0A2540;
+            padding-right: 15px;
+        }
+
+        .eje-y span {
+            transform: translateY(-50%);
+            background-color: #F8F6F0;
+            padding-right: 5px;
+            z-index: 2;
+        }
+
+        .eje-y span:last-child {
+            transform: translateY(50%);
+        }
+
+        .barra-contenedor {
+            width: 12%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 1;
+            height: 100%;
+        }
+
+        .barra {
+            width: 70%;
+            background-color: #4CB5F5;
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            box-shadow: 1px 0 4px rgba(0,0,0,0.1);
+        }
+
+        .valor-barra {
+            position: absolute;
+            top: -30px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 14pt;
+            color: #0A2540;
+        }
+
+        .etiquetas-area {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .etiqueta-columna {
+            width: 12%;
+            text-align: center;
+        }
+
+        .titulo-periodo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 11pt;
+            color: #0A2540;
+            margin-bottom: 4px;
+        }
+
+        .nota-periodo {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10pt;
+            color: #1A1A1A;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-diapositiva">Inflación en el Imperio Romano</h1>
+        <img src="../recursos/imagenes/logo_.png" alt="Logo de la empresa" class="logo-empresa">
+    </header>
+    
+    <div class="contenido-principal">
+        <ul>
+            <li class="texto-nivel-1">La inflación pudo ser una de las causas de la caída del Imperio.</li>
+        </ul>
+        
+        <!-- Renderizado de Gráfica a partir del JSON -->
+        <div class="grafica-wrapper">
+            <div class="grafica-area">
+                <!-- Líneas horizontales de guía (25% en 25%) -->
+                <div class="linea-guia" style="bottom: 100%;"></div>
+                <div class="linea-guia" style="bottom: 75%;"></div>
+                <div class="linea-guia" style="bottom: 50%;"></div>
+                <div class="linea-guia" style="bottom: 25%;"></div>
+                <div class="linea-guia" style="bottom: 0%;"></div>
+                
+                <div class="eje-y">
+                    <span>100%</span>
+                    <span>75%</span>
+                    <span>50%</span>
+                    <span>25%</span>
+                    <span>0%</span>
+                </div>
+
+                <!-- Elemento JSON 1: Augusto -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 98%;">
+                        <span class="valor-barra">98%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 2: Nerón -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 93%;">
+                        <span class="valor-barra">93%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 3: Marco Aurelio -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 75%;">
+                        <span class="valor-barra">75%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 4: Septimio Severo -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 50%;">
+                        <span class="valor-barra">50%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 5: Crisis del Siglo III -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 5%;">
+                        <span class="valor-barra">5%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 6: Diocleciano -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 5%;">
+                        <span class="valor-barra">5%</span>
+                    </div>
+                </div>
+                <!-- Elemento JSON 7: Caída de Roma -->
+                <div class="barra-contenedor">
+                    <div class="barra" style="height: 0px; border-top: 2px solid #4CB5F5;">
+                        <span class="valor-barra">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="etiquetas-area">
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Augusto</div>
+                    <div class="nota-periodo">Alta estabilidad</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Nerón</div>
+                    <div class="nota-periodo">Primera devaluación</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Marco Aurelio</div>
+                    <div class="nota-periodo">Devaluación gradual</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Septimio Severo</div>
+                    <div class="nota-periodo">Crisis monetaria</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Crisis Siglo III</div>
+                    <div class="nota-periodo">Hiperinflación</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Diocleciano</div>
+                    <div class="nota-periodo">Reformas monetarias</div>
+                </div>
+                <div class="etiqueta-columna">
+                    <div class="titulo-periodo">Caída de Roma</div>
+                    <div class="nota-periodo">Colapso del sistema</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <span>La IA explicada para escépticos</span>
+        <span>inflación en diversos períodos. - Página 8</span>
+    </footer>
+</body>
+</html>

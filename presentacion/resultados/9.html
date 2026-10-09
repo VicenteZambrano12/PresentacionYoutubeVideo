@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diapositiva de Contenido</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 50px 80px;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: #F8F6F0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 3px solid #4CB5F5;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1.titulo-diapositiva {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28pt;
+            color: #0A2540;
+            margin: 0;
+        }
+
+        .logo-empresa {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .contenido-principal {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        ul li::before {
+            content: "■";
+            color: #4CB5F5;
+            font-size: 0.8em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        .texto-nivel-1 {
+            font-size: 24pt;
+        }
+
+        .contenedor-grafica {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .grafica-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border: 2px solid #0A2540;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            font-size: 12pt;
+            color: #1A1A1A;
+            border-top: 1px solid #0A2540;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-diapositiva">Inflación en el Imperio Romano</h1>
+        <img src="../recursos/imagenes/logo_.png" alt="Logo de la empresa" class="logo-empresa">
+    </header>
+    
+    <div class="contenido-principal">
+        <ul>
+            <li class="texto-nivel-1">La inflación pudo ser una de las causas de la caída del Imperio.</li>
+        </ul>
+        
+        <div class="contenedor-grafica">
+            <img src="../material/tablas_graficas/graf_inflacion.jpeg" alt="Gráfica de inflación en el Imperio Romano" class="grafica-img">
+        </div>
+    </div>
+    
+    <footer>
+        <span>Inflación en diversos períodos.</span>
+        <span>Página 8</span>
+    </footer>
+</body>
+</html>
