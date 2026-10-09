@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diapositiva de Contenido</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 50px 80px;
+            box-sizing: border-box;
+            height: 100vh;
+            background-color: #F8F6F0;
+            font-family: 'Open Sans', sans-serif;
+            color: #1A1A1A;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            border-bottom: 3px solid #4CB5F5;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            /* Añadido flexbox para alinear el título y el logo */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1.titulo-diapositiva {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Bold */
+            font-size: 28pt;
+            color: #0A2540;
+            margin: 0;
+        }
+
+        /* Estilos para el logo */
+        .logo-empresa {
+            max-height: 60px; /* Puedes ajustar este valor según la proporción de tu logo */
+            width: auto;
+        }
+
+        .contenido-principal {
+            flex: 1;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        ul li::before {
+            content: "■";
+            color: #4CB5F5;
+            font-size: 0.8em;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        /* Tamaños de texto basados en la jerarquía */
+        .texto-nivel-1 {
+            font-size: 24pt;
+        }
+
+        .texto-nivel-2 {
+            font-size: 20pt;
+            margin-left: 40px;
+            margin-top: -10px;
+        }
+        
+        .texto-nivel-2::before {
+            content: "○"; /* Viñeta secundaria */
+        }
+
+        .texto-nivel-3 {
+            font-size: 18pt;
+            margin-left: 80px;
+            margin-top: -10px;
+        }
+        
+        .texto-nivel-3::before {
+            content: "-"; /* Viñeta terciaria */
+        }
+
+        .resaltado {
+            color: #4CB5F5;
+            font-weight: bold;
+        }
+
+        a {
+            color: #4CB5F5;
+            text-decoration: none;
+            border-bottom: 1px dashed #4CB5F5;
+        }
+
+        footer {
+            font-size: 12pt;
+            color: #1A1A1A;
+            border-top: 1px solid #0A2540;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="titulo-diapositiva">Conceptos Básicos y Casos de Uso</h1>
+        <!-- Aquí se ha insertado el logo -->
+        <img src="../recursos/imagenes/logo_.png" alt="Logo de la empresa" class="logo-empresa">
+    </header>
+    
+    <div class="contenido-principal">
+        <ul>
+            <li class="texto-nivel-1">La IA no es magia, son matemáticas y <span class="resaltado">datos a gran escala</span>.</li>
+            <li class="texto-nivel-2">Modelos de lenguaje entrenados para predecir secuencias.</li>
+            <li class="texto-nivel-3">Esto garantiza legibilidad incluso en bloques largos de información y <a href="#">referencias técnicas</a>.</li>
+            <li class="texto-nivel-1">Desmitificando el escepticismo inicial corporativo.</li>
+            <li class="texto-nivel-2">Optimización de tareas de bajo valor añadido.</li>
+        </ul>
+    </div>
+    
+    <footer>
+        <span>La IA explicada para escépticos</span>
+        <span>Notas al pie - Página 3</span>
+    </footer>
+</body>
+</html>
